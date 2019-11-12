@@ -1,0 +1,1 @@
+for i in {1..10}; do mkdir $i && ffmpeg -i $i.mp4 -r 1 -q:v 2 $i/%04d.jpg; done

@@ -2,7 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+serie/
+fbenv/
+*.jpg
+vid/
+*.zip
+.env
 # C extensions
 *.so
 
