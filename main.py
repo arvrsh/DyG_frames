@@ -1,3 +1,4 @@
+#!/root/dyg/fenv/bin/python
 import facebook
 from dotenv import load_dotenv
 import os
@@ -7,7 +8,7 @@ load_dotenv(verbose=True)
 access_token = os.getenv('FB_TOKEN')
 page_id = os.getenv('FB_PAGE_ID')
 folder = os.getenv('VID_FOLDER')
-graph = facebook.GraphAPI(access_token)
+graph = facebook.GraphAPI(access_token, version="4.0")
 data = None
 
 def load_data():
@@ -46,12 +47,14 @@ def get_frame_count(data):
 def post_frame(data):
     # do something 
     if data['save_data']['episode'] > 10:
-        return print("[x] Se acabaron los episodios we")
+        print("[x] Se acabaron los episodios we")
+        return False
     ndata = data['save_data']
     message = "Episodio: " + data['seasons'][ndata['season']-1]['episode'][ndata['episode']-1]
     message += " - Frame " + str(ndata['frame']) + "/"+ str(get_frame_count(ndata))
     try:
-        graph.put_photo(image = open(get_episode_frame(ndata),'rb'), message = message)
+        frame = get_episode_frame(ndata)
+        graph.put_photo(image = open(frame,'rb'), message = message)
         print("[!] " + message)
         # recibe la data original...!! 
         next_frame(data)
@@ -68,6 +71,5 @@ if __name__ == "__main__":
     data = load_data()
     post_frame(data)
     pass
-
 
 
