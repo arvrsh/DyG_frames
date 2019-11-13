@@ -3,6 +3,7 @@ import facebook
 from dotenv import load_dotenv
 import os
 import json
+from datetime import datetime
 
 load_dotenv(verbose=True)
 access_token = os.getenv('FB_TOKEN')
@@ -62,13 +63,15 @@ def post_frame(data):
         print("[X]", ex)
 
 def welcome():
-    print("-------------------------------------")
-    print("Every Frame Bot - Hecho a la mala    ")
-    print("-------------------------------------")
+    # print("-------------------------------------")
+    # print("Every Frame Bot - Hecho a la mala    ")
+    # print("-------------------------------------")
+    pass
 
 if __name__ == "__main__":
     welcome()
     data = load_data()
+    print("[D] ", datetime.now())
     post_frame(data)
     pass
 
