@@ -97,6 +97,12 @@ Ejemplo
 ## Instalación
 Actualmente `dyg_frames` no funciona en un proceso de fondo, asi, poder ahorrar recursos de una maquina virtual. Sin embargo se puede crear un `crontab` para ejecutarlo en el tiempo que fuera necesario.
 
+> Es importante añadir que para algunas instancias de linux es necesario utilizar UTF8
+
+```shell
+$ PYTHONIOENCODING=UTF-8 python main.py
+```
+
 1. Crear un `virtualenv` de python 3.6+
 2. `source env/bin/activate`
 3. `pip install facebook-sdk`
@@ -105,3 +111,7 @@ Actualmente `dyg_frames` no funciona en un proceso de fondo, asi, poder ahorrar 
    1. `FACEBOOK_TOKEN`: Token app requerida para publicar en facebook
    2. `PAGE_ID`: _deprecada para esta app_
    3. `VID_FOLDER`: Nombre del directorio donde se encuentran los frames de las imagenes
+
+### Utilizando crontab 
+1. `# crontab -e`
+2. `*/10 * * * * cd /path/to/dyg/ && /path/to/dyg/env/bin/python main.py >> logs.txt` .. se ejecutará cada 10 minutos y guardara el estado en un log.
