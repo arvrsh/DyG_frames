@@ -1,1 +1,27 @@
-{"name": "Diego & Glot", "disponible": true, "seasons": [{"number": 1, "episodes": 10, "episode": ["Glot el Kiltro", "S\u00faper Familia", "Mala Pata", "Vacaciones", "Doble de Cuerpo", "Circo", "Vigilante", "Astronauta", "Tolerancia", "Mi Comunidad"]}, {"number": 2, "episodes": 2, "episode": ["Hola", "Mundo"]}], "save_data": {"season": 2, "episode": 1, "frame": 3}}
+{
+    "name": "Diego & Glot",
+    "disponible": true,
+    "seasons": [
+        {
+            "number": 1,
+            "episodes": 10,
+            "episode": [
+                "Glot el Kiltro",
+                "S\u00faper Familia",
+                "Mala Pata",
+                "Vacaciones",
+                "Doble de Cuerpo",
+                "Circo",
+                "Vigilante",
+                "Astronauta",
+                "Tolerancia",
+                "Mi Comunidad"
+            ]
+        }
+    ],
+    "save_data": {
+        "season": 1,
+        "episode": 2,
+        "frame": 1
+    }
+}
