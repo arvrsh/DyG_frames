@@ -12,6 +12,7 @@ folder = os.getenv('VID_FOLDER')
 graph = facebook.GraphAPI(access_token, version="4.0")
 data = None
 
+
 def load_data():
     with open('data.json','r') as jsonfile:
         data = json.load(jsonfile)
