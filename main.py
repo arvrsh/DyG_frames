@@ -1,4 +1,4 @@
-#!/root/dyg/fenv/bin/python
+# coding=utf-8
 import facebook
 from dotenv import load_dotenv
 import os
@@ -11,7 +11,6 @@ page_id = os.getenv('FB_PAGE_ID')
 folder = os.getenv('VID_FOLDER')
 graph = facebook.GraphAPI(access_token, version="4.0")
 data = None
-
 
 def load_data():
     with open('data.json','r') as jsonfile:

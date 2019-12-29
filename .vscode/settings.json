@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "fbenv/bin/python"
+    "python.pythonPath": "fbenv/bin/python",
+    "cSpell.language": ",es"
 }
